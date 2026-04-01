@@ -1,11 +1,11 @@
 'use client'
 
-import React, { useRef, useEffect, useState, useCallback } from 'react';
+import { useRef, useEffect, useState, useCallback } from 'react';
 import useFloorPlanState from '@/lib/useFloorPlan';
 import FloorPlanCanvas from '@/components/FloorPlanCanvas';
 import TopNavbar from '@/components/TopNavbar';
 import LeftToolbar from '@/components/LeftToolbar';
-// import RightPanel from '@/components/RightPanel';
+import RightPanel from '@/components/RightPanel';
 import BottomBar from '@/components/BottomBar';
 
 export default function Home() {
@@ -86,7 +86,7 @@ export default function Home() {
         <div ref={canvasContainerRef} className="flex-1 relative overflow-hidden bg-background">
           <FloorPlanCanvas state={state} containerRef={canvasContainerRef} />
         </div>
-        {/* <RightPanel state={state} /> */}
+         <RightPanel state={state} /> 
       </div>
       <BottomBar state={state} />
     </div>
